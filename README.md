@@ -14,7 +14,7 @@ This repository hosts the public-facing brand assets and documentation for Nexus
 
 ## Website
 
-Visit: https://dradtke08.github.io/nexus-systems/
+Visit: https://dradtke08.github.io/Nexus-Systems/
 
 ## Private Governance
 
