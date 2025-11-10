@@ -3,41 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Systems - Governance Assets</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nexus Systems - Brand Assets</title>
+    <meta name="description" content="Nexus Systems brand assets and corporate identity resources">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background: linear-gradient(135deg, #1E3A8A 0%, #A855F7 100%);
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 50%, #A855F7 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
         }
-        .logo {
+        
+        .container {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 800px;
+        }
+        
+        .logo-container {
             width: 300px;
-            margin: 30px auto;
+            height: 300px;
+            margin: 0 auto 40px;
             background: white;
-            border-radius: 20px;
-            padding: 30px;
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-out;
         }
-        .logo img {
+        
+        .logo-container img {
             width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
+        
         h1 {
             font-size: 3em;
-            margin: 20px 0;
+            margin-bottom: 20px;
+            font-weight: 300;
+            animation: slideUp 1s ease-out 0.2s both;
         }
-        p {
-            font-size: 1.2em;
+        
+        .tagline {
+            font-size: 1.5em;
+            margin-bottom: 30px;
             opacity: 0.9;
+            font-weight: 300;
+            font-style: italic;
+            animation: slideUp 1s ease-out 0.4s both;
+        }
+        
+        .links {
+            margin-top: 40px;
+            animation: slideUp 1s ease-out 0.6s both;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .link-btn {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 15px 30px;
+            border: 2px solid white;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .link-btn:hover {
+            background: white;
+            color: #1E3A8A;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+        
+        .link-btn.private {
+            border-color: #FCD34D;
+            position: relative;
+        }
+        
+        .link-btn.private:before {
+            content: "🔒";
+            font-size: 1em;
+        }
+        
+        .link-btn.private:hover {
+            background: #FCD34D;
+            color: #1E3A8A;
+        }
+        
+        .assets-info {
+            margin-top: 60px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            animation: slideUp 1s ease-out 0.8s both;
+        }
+        
+        .assets-info h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .assets-info p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .asset-url {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 12px 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            word-break: break-all;
+            margin: 10px 0;
+            text-align: left;
+        }
+        
+        .section-divider {
+            margin: 30px 0;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .note {
+            background: rgba(252, 211, 77, 0.2);
+            border-left: 4px solid #FCD34D;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .note-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #FCD34D;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .logo-container {
+                width: 200px;
+                height: 200px;
+                padding: 30px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .tagline {
+                font-size: 1.2em;
+            }
+            
+            .links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .link-btn {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="logo">
-        <img src="logos\Nexus_Systems_Corporate_Logo.png" alt="Nexus Systems">
+    <div class="container">
+        <div class="logo-container">
+            <img src="assets/branding/logos/Nexus_Systems_Corporate_Logo.png" 
+                 alt="Nexus Systems Logo">
+        </div>
+        
+        <h1>Nexus Systems</h1>
+        <p class="tagline">Intelligent Solutions, Connected Future</p>
+        
+        <div class="links">
+            <a href="https://dradtke08.github.io/nexus-systems/" class="link-btn">
+                🏠 Home
+            </a>
+            <a href="https://github.com/dradtke08/nexus-systems" class="link-btn" target="_blank">
+                📂 Public Repository
+            </a>
+            <a href="https://github.com/dradtke08/nexus-systems-governance" class="link-btn private" target="_blank">
+                Governance Repository
+            </a>
+        </div>
+        
+        <div class="assets-info">
+            <h2>🎨 Brand Assets</h2>
+            <p>This page hosts Nexus Systems brand assets for use in Microsoft 365 and other enterprise applications.</p>
+            
+            <div class="section-divider"></div>
+            
+            <h3 style="margin-top: 25px; margin-bottom: 15px;">📋 Microsoft 365 Configuration:</h3>
+            
+            <p style="text-align: left; margin-bottom: 10px;"><strong>Default Logo URL:</strong></p>
+            <div class="asset-url">
+https://dradtke08.github.io/nexus-systems/assets/branding/logos/Nexus_Systems_Corporate_Logo.png
+            </div>
+            
+            <p style="text-align: left; margin-bottom: 10px; margin-top: 20px;"><strong>Alternate Logo URL (Dark theme):</strong></p>
+            <div class="asset-url">
+https://dradtke08.github.io/nexus-systems/assets/branding/logos/Nexus_Systems_Corporate_Logo.png
+            </div>
+            
+            <p style="text-align: left; margin-bottom: 10px; margin-top: 20px;"><strong>On-Click Link:</strong></p>
+            <div class="asset-url">
+https://dradtke08.github.io/nexus-systems/
+            </div>
+            
+            <div class="section-divider"></div>
+            
+            <div class="note">
+                <div class="note-title">🔒 About Governance Repository</div>
+                <p style="margin: 0; font-size: 0.95em;">
+                    The Nexus Systems Governance repository is private and contains confidential documentation including policies, standards, frameworks, and strategic planning materials. Access is restricted to authorized team members only.
+                </p>
+            </div>
+            
+            <div class="section-divider"></div>
+            
+            <h3 style="margin-top: 25px; margin-bottom: 15px;">📦 Available Assets:</h3>
+            <ul style="text-align: left; list-style: none; padding: 0;">
+                <li style="padding: 8px 0;">✅ Corporate Logo (PNG, 701KB)</li>
+                <li style="padding: 8px 0;">✅ Brand Guidelines (NXS-2025-STD-110)</li>
+                <li style="padding: 8px 0;">✅ Document Templates (Markdown, HTML)</li>
+                <li style="padding: 8px 0;">✅ Color Palette & Typography Standards</li>
+            </ul>
+            
+            <p style="margin-top: 30px; font-size: 0.9em; opacity: 0.8;">
+                © 2025 Nexus Systems. All rights reserved.
+            </p>
+        </div>
     </div>
-    <h1>Nexus Systems</h1>
-    <p>Intelligent Solutions, Connected Future</p>
-    <p><a href="https://nexus-systems.io" style="color: white;">nexus-systems.io</a></p>
 </body>
 </html>
